@@ -3,7 +3,15 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class SetAllArrayElementsTest {
-    public Lab saae = new Lab();
+    public Lab saae = new Lab(){
+        public void set(int[] x, int y){
+            int z = x.length-1;
+            while(z>-1){
+                x[z] = y;
+                z--;
+            }
+        }
+    };
 
     /**
      * Given some array arr as {1,2,3,4} and int n as 0, calling saae.set(arr,n) should change arr to {0,0,0,0}.
